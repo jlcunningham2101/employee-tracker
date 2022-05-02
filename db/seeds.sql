@@ -15,7 +15,7 @@ VALUES
 ('Salesperson', 80000, 1), 
 ('Lead Engineer', 150000, 2),  
 ('Software Engineer', 120000, 3),
-('Account Manager', 160000, 4),
+('Account Manager',JOIN  160000, 4),
 ('Accountant', 125000, 5),
 ('Legal Team Lead', 250000, 6),
 ('Lawyer', 190000, 7);
