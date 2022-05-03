@@ -4,7 +4,7 @@ const db = require('./db/connection');
 const apiRoutes = require('./routes/apiRoutes');
 const inquirer = require('Inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
-const Connection = require('mysql2/typings/mysql/lib/Connection');
+const connection = require('mysql2/typings/mysql/lib/Connection');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -84,7 +84,6 @@ connection.query(query, function(err, res){
   console.table('All Employees',res);
 })
 )
-}
 
 
 
