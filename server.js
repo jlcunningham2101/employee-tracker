@@ -3,7 +3,7 @@ const express = require('express');
 const db = require('./db/connection');
 const apiRoutes = require('./routes/apiRoutes');
 const inquirer = require('Inquirer');
-const generateMarkdown = require('./utils/generateMarkdown');
+//const generateMarkdown = require('./utils/generateMarkdown');
 const connection = require('mysql2/typings/mysql/lib/Connection');
 
 const PORT = process.env.PORT || 3001;
@@ -66,13 +66,12 @@ case "Update an Employee":
   UpdateEmployee();
   break;
   }
-});
-}
+},
 
 function viewDepartments(){
   let query = "SELECT department.name";
 
-}
+},
 
 function viewEmployees(){
 let query = "SELECT employees.first_name, employees.last_name";
@@ -83,17 +82,6 @@ query += "LEFT JOIN employees ON employees.manager_id = manager.id";
 connection.query(query, function(err, res){
   console.table('All Employees',res);
 })
-)
-
-
-
-
-
-
-
-
-
-
 
 // Function call to initialize app
 init();
